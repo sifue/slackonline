@@ -1,0 +1,9 @@
+[Core]
+Name = Slackonline
+Module = slackonline
+
+[Documentation]
+Description = Slack chatbotgame.
+
+[Python]
+Version = 2+
