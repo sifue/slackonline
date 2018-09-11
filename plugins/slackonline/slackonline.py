@@ -12,5 +12,13 @@ class Slackonline(BotPlugin):
         Slackオンラインボットへの!soコマンド
         """
 
-        print
+        self.log.info('きたよ')
+        self.log.debug(msg)
         return 'It *works* !'
+
+    def my_callback(self):
+        self.log.debug('I am called every minute')
+
+    def activate(self):
+        super().activate()
+        self.start_poller(60, self.my_callback)
