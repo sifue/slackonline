@@ -14,6 +14,15 @@ class Slackonline(BotPlugin):
 
         self.log.info('きたよ')
         self.log.debug(msg)
+        self.log.debug(args)
+        self.log.debug(self.rooms())
+
+        for room in self.rooms():
+            self.log.debug(room)
+            for occupant in room.occupants:
+                self.log.debug(occupant)
+                self.log.debug(occupant.username)
+
         return 'It *works* !'
 
     def my_callback(self):
